@@ -1,0 +1,26 @@
+Dead Reckoning
+The process of calculating the current position of a moving object by using a previously determined position, or fix, and incorporating estimates of speed, heading and elapsed time.
+The Process of dead reckoning involves the navigator starting from a fixed position, identified on a map from a previous fix or based on another reliable reference point. They track direction using a compass, gyroscope, or other instruments to measure the bearing.
+
+How Dead Reckoning Works:
+• Gyros give angular rate which is integrated to the altitude 
+• Accelerometer, rotated into the world frame with gravity removed, integrate once for velocity and twice for position.
+• Pitot + magnetometer gives a wind corrected ground track
+• Optical flow with rangefinder gives horizontal velocity.
+• Flight controller like PX4 blends the Inertia measurement unit driven prediction with intermittent corrections.
+
+Applications of Dead Reckoning
+
+GNSS-Denied Navigation: Keeps drones flying when GPS/GNSS signals are blocked, jammed or unavailable indoors, underground or in dense urban areas.
+
+Anti-Jamming and Spoofing Defense: Acts as reliable, autonomous fallback position calculator if radio frequency interference attacks and disrupt satellite feeds.
+
+High frequency Sensor Bridging: Fills the gap between slow GNSS updates using fast inertial data to support smooth camera geotagging or LiDAR tracking.
+
+Inspection Drones: Tracking position inside structures such as tanks or fuselage bays, often with visual odometry
+
+References
+* https://everythingrf.com/community/what-is-dead-reckoning/ 
+* http//pointonenav.com/insights/why-you-need-dead-reckoning-top-applications-for-ins/
+* https://www.uavnavigation.com/company/blog/dead-reckoning-operations/  
+
